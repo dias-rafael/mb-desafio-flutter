@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:coinmarketcap/app_root/app_root_view.dart';
 import 'package:coinmarketcap/app_root/error_view.dart';
+import 'package:coinmarketcap/bootstraps/app_initialization.dart';
 import 'package:coinmarketcap/bootstraps/environment_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -16,7 +17,9 @@ void main() async {
 
         final environmentConfig = EnvironmentConfig.fromEnv(dotenv.env);
 
-        runApp(AppRootView(environmentConfig: environmentConfig));
+        await AppInitialization.init(environmentConfig);
+
+        runApp(AppRootView());
       } catch (e, stackTrace) {
         runApp(ErrorView(error: e.toString(), stackTrace: stackTrace));
 

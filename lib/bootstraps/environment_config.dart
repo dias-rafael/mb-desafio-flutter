@@ -7,11 +7,13 @@ class EnvironmentConfig {
   final String apiKey;
   final Environment environment;
   final bool isDebug;
+  final String baseUrl;
 
   const EnvironmentConfig({
     required this.apiKey,
     required this.environment,
     required this.isDebug,
+    required this.baseUrl,
   });
 
   factory EnvironmentConfig.fromEnv(Map<String, String> env) {
@@ -35,10 +37,16 @@ class EnvironmentConfig {
 
     final isDebug = kDebugMode;
 
+    final baseUrl = env['BASE_URL'];
+    if (baseUrl == null || baseUrl.isEmpty) {
+      throw Exception('BASE_URL is not set in environment variables.');
+    }
+
     return EnvironmentConfig(
       apiKey: apiKey,
       environment: environment,
       isDebug: isDebug,
+      baseUrl: baseUrl,
     );
   }
 }
