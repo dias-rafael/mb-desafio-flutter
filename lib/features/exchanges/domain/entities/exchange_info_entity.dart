@@ -3,7 +3,7 @@ class ExchangeInfoEntity {
   final String name;
   final String slug;
   final int isActive;
-  final String status;
+  final String? status;
   final DateTime firstHistoricalData;
   final DateTime lastHistoricalData;
 
@@ -12,7 +12,7 @@ class ExchangeInfoEntity {
     required this.name,
     required this.slug,
     required this.isActive,
-    required this.status,
+    this.status,
     required this.firstHistoricalData,
     required this.lastHistoricalData,
   });

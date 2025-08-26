@@ -59,20 +59,20 @@ class AppLocalizations {
     return Intl.message('CoinMarketCap', name: 'appTitle', desc: '', args: []);
   }
 
-  /// `Cryptocurrency List`
+  /// `Exchanges List`
   String get listTitle {
     return Intl.message(
-      'Cryptocurrency List',
+      'Exchanges List',
       name: 'listTitle',
       desc: '',
       args: [],
     );
   }
 
-  /// `Cryptocurrency Details`
+  /// `Exchange Details`
   String get detailsTitle {
     return Intl.message(
-      'Cryptocurrency Details',
+      'Exchange Details',
       name: 'detailsTitle',
       desc: '',
       args: [],
@@ -104,6 +104,76 @@ class AppLocalizations {
     return Intl.message(
       'An unknown error occurred.',
       name: 'errorUnknown',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No data available`
+  String get noDataAvailable {
+    return Intl.message(
+      'No data available',
+      name: 'noDataAvailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Spot Volume USD: {value}`
+  String spotVolumeUSD(Object value) {
+    return Intl.message(
+      'Spot Volume USD: $value',
+      name: 'spotVolumeUSD',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `Launched: {value}`
+  String launched(Object value) {
+    return Intl.message(
+      'Launched: $value',
+      name: 'launched',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `Error fetching more exchanges`
+  String get errorFetchingMoreExchanges {
+    return Intl.message(
+      'Error fetching more exchanges',
+      name: 'errorFetchingMoreExchanges',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error fetching exchanges`
+  String get errorFetchingExchanges {
+    return Intl.message(
+      'Error fetching exchanges',
+      name: 'errorFetchingExchanges',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No exchange detail available`
+  String get noExchangeDetailAvailable {
+    return Intl.message(
+      'No exchange detail available',
+      name: 'noExchangeDetailAvailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error fetching exchange details`
+  String get errorFetchingDetailExchanges {
+    return Intl.message(
+      'Error fetching exchange details',
+      name: 'errorFetchingDetailExchanges',
       desc: '',
       args: [],
     );

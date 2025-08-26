@@ -1,6 +1,7 @@
 import 'package:coinmarketcap/app_routes.dart';
-import 'package:coinmarketcap/features/exchanges/presentation/pages/details_coin_page.dart';
-import 'package:coinmarketcap/features/exchanges/presentation/pages/list_coins_page.dart';
+import 'package:coinmarketcap/features/exchanges/domain/entities/exchange_detail_entity.dart';
+import 'package:coinmarketcap/features/exchanges/presentation/pages/details_exchange_page.dart';
+import 'package:coinmarketcap/features/exchanges/presentation/pages/list_exchange_page.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -10,11 +11,12 @@ class AppRouter {
   }
   void _registerRoutes() {
     _routes[AppRoutes.LISTCOINS] = (args) => MaterialPageRoute(
-      builder: (context) => const ListCoinsPage(),
+      builder: (context) => const ListExchangePage(),
       settings: RouteSettings(name: AppRoutes.LISTCOINS, arguments: args),
     );
     _routes[AppRoutes.DETAILSCOIN] = (args) => MaterialPageRoute(
-      builder: (context) => DetailsCoinPage(),
+      builder: (context) =>
+          DetailsExchangePage(exchangeDetail: args as ExchangeDetailEntity),
       settings: RouteSettings(name: AppRoutes.DETAILSCOIN, arguments: args),
     );
   }

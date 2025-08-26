@@ -13,8 +13,11 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+
   collection: 1.19.1
   cupertino_icons: ^1.0.8
+  equatable: 2.0.5
+  flutter_bloc: 9.1.0
   flutter_dotenv: 6.0.0
   get_it: 8.2.0
   http: 1.5.0

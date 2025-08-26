@@ -1,5 +1,6 @@
+import 'package:coinmarketcap/app_router.dart';
 import 'package:coinmarketcap/core/l10n/l10n.dart';
-import 'package:coinmarketcap/features/exchanges/presentation/pages/list_coins_page.dart';
+import 'package:coinmarketcap/features/exchanges/presentation/pages/list_exchange_page.dart';
 import 'package:coinmarketcap/services/dependency_service.dart';
 import 'package:coinmarketcap/services/navigation_service.dart';
 import 'package:collection/collection.dart';
@@ -13,6 +14,7 @@ class AppRootView extends StatelessWidget {
   Widget build(BuildContext context) {
     final NavigationService navigationService =
         DependencyService.resolve<NavigationService>();
+    final AppRouter appRouter = DependencyService.resolve<AppRouter>();
 
     return MaterialApp(
       title: 'CoinMarketCap',
@@ -40,7 +42,11 @@ class AppRootView extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       navigatorKey: navigationService.rootNavigatorKey,
-      home: ListCoinsPage(),
+      onGenerateRoute: (settings) => appRouter.getRouteByName(
+        settings.name,
+        arguments: settings.arguments,
+      ),
+      home: ListExchangePage(),
     );
   }
 }

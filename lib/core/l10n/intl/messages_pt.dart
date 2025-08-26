@@ -20,11 +20,24 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'pt';
 
+  static String m0(value) => "Lançado em: ${value}";
+
+  static String m1(value) => "Volume Spot USD: ${value}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appTitle": MessageLookupByLibrary.simpleMessage("CoinMarketCap"),
     "detailsTitle": MessageLookupByLibrary.simpleMessage(
-      "Detalhes Criptomoeda",
+      "Detalhes da Exchange",
+    ),
+    "errorFetchingDetailExchanges": MessageLookupByLibrary.simpleMessage(
+      "Erro ao buscar detalhes das exchanges",
+    ),
+    "errorFetchingExchanges": MessageLookupByLibrary.simpleMessage(
+      "Erro ao buscar exchanges",
+    ),
+    "errorFetchingMoreExchanges": MessageLookupByLibrary.simpleMessage(
+      "Erro ao buscar mais exchanges",
     ),
     "errorMessage": MessageLookupByLibrary.simpleMessage(
       "Algo deu errado. Por favor, tente novamente mais tarde.",
@@ -33,6 +46,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "errorUnknown": MessageLookupByLibrary.simpleMessage(
       "Ocorreu um erro desconhecido.",
     ),
-    "listTitle": MessageLookupByLibrary.simpleMessage("Lista Criptomoedas"),
+    "launched": m0,
+    "listTitle": MessageLookupByLibrary.simpleMessage("Lista de Exchanges"),
+    "noDataAvailable": MessageLookupByLibrary.simpleMessage(
+      "Nenhum dado disponível",
+    ),
+    "noExchangeDetailAvailable": MessageLookupByLibrary.simpleMessage(
+      "Nenhum detalhe de exchange disponível",
+    ),
+    "spotVolumeUSD": m1,
   };
 }

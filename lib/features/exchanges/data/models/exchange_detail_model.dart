@@ -8,8 +8,8 @@ class ExchangeDetailModel extends ExchangeDetailEntity {
     required super.name,
     required super.slug,
     required super.logo,
-    required super.description,
-    required super.dateLaunched,
+    super.description,
+    super.dateLaunched,
     required super.notice,
     required super.countries,
     required super.fiats,
@@ -19,7 +19,7 @@ class ExchangeDetailModel extends ExchangeDetailEntity {
     required super.takerFee,
     required super.weeklyVisits,
     required super.spotVolumeUsd,
-    required super.spotVolumeLastUpdated,
+    super.spotVolumeLastUpdated,
     required ExchangeUrlsModel super.urls,
   });
 
@@ -29,8 +29,10 @@ class ExchangeDetailModel extends ExchangeDetailEntity {
       name: json['name'] as String,
       slug: json['slug'] as String,
       logo: json['logo'] as String,
-      description: json['description'] as String,
-      dateLaunched: DateTime.parse(json['date_launched'] as String),
+      description: json['description'] as String?,
+      dateLaunched: (json['date_launched'] != null)
+          ? DateTime.tryParse(json['date_launched'] as String)
+          : null,
       notice: json['notice'] as String?,
       countries: (json['countries'] as List<dynamic>).cast<String>(),
       fiats: (json['fiats'] as List<dynamic>).cast<String>(),
@@ -39,10 +41,12 @@ class ExchangeDetailModel extends ExchangeDetailEntity {
       makerFee: (json['maker_fee'] as num).toDouble(),
       takerFee: (json['taker_fee'] as num).toDouble(),
       weeklyVisits: json['weekly_visits'] as int,
-      spotVolumeUsd: (json['spot_volume_usd'] as num).toDouble(),
-      spotVolumeLastUpdated: DateTime.parse(
-        json['spot_volume_last_updated'] as String,
-      ),
+      spotVolumeUsd: (json['spot_volume_usd'] != null)
+          ? (json['spot_volume_usd'] as num).toDouble()
+          : 0.0,
+      spotVolumeLastUpdated: (json['spot_volume_last_updated'] != null)
+          ? DateTime.tryParse(json['spot_volume_last_updated'] as String)
+          : null,
       urls: ExchangeUrlsModel.fromJson(json['urls'] as Map<String, dynamic>),
     );
   }

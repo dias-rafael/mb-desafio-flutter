@@ -5,8 +5,8 @@ class ExchangeDetailEntity {
   final String name;
   final String slug;
   final String logo;
-  final String description;
-  final DateTime dateLaunched;
+  final String? description;
+  final DateTime? dateLaunched;
   final String? notice;
   final List<String> countries;
   final List<String> fiats;
@@ -16,7 +16,7 @@ class ExchangeDetailEntity {
   final double takerFee;
   final int weeklyVisits;
   final double spotVolumeUsd;
-  final DateTime spotVolumeLastUpdated;
+  final DateTime? spotVolumeLastUpdated;
   final ExchangeUrlsEntity urls;
 
   const ExchangeDetailEntity({
@@ -24,8 +24,8 @@ class ExchangeDetailEntity {
     required this.name,
     required this.slug,
     required this.logo,
-    required this.description,
-    required this.dateLaunched,
+    this.description,
+    this.dateLaunched,
     required this.notice,
     required this.countries,
     required this.fiats,
@@ -35,7 +35,7 @@ class ExchangeDetailEntity {
     required this.takerFee,
     required this.weeklyVisits,
     required this.spotVolumeUsd,
-    required this.spotVolumeLastUpdated,
+    this.spotVolumeLastUpdated,
     required this.urls,
   });
 }

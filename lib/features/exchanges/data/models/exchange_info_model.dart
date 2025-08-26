@@ -6,7 +6,7 @@ class ExchangeInfoModel extends ExchangeInfoEntity {
     required super.name,
     required super.slug,
     required super.isActive,
-    required super.status,
+    super.status,
     required super.firstHistoricalData,
     required super.lastHistoricalData,
   });
@@ -17,7 +17,7 @@ class ExchangeInfoModel extends ExchangeInfoEntity {
       name: json['name'] as String,
       slug: json['slug'] as String,
       isActive: json['is_active'] as int,
-      status: json['status'] as String,
+      status: json['status'] as String?,
       firstHistoricalData: DateTime.parse(
         json['first_historical_data'] as String,
       ),

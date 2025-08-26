@@ -2,9 +2,16 @@
 {
     "@@locale": "en",
     "appTitle": "CoinMarketCap",
-    "listTitle": "Cryptocurrency List",
-    "detailsTitle": "Cryptocurrency Details",
+    "listTitle": "Exchanges List",
+    "detailsTitle": "Exchange Details",
     "errorTitle": "An error occurred",
     "errorMessage": "Something went wrong. Please try again later.",
-    "errorUnknown": "An unknown error occurred."
+    "errorUnknown": "An unknown error occurred.",
+    "noDataAvailable": "No data available",
+    "spotVolumeUSD": "Spot Volume USD: {value}",
+    "launched": "Launched: {value}",
+    "errorFetchingMoreExchanges": "Error fetching more exchanges",
+    "errorFetchingExchanges": "Error fetching exchanges",
+    "noExchangeDetailAvailable": "No exchange detail available",
+    "errorFetchingDetailExchanges": "Error fetching exchange details"
 }
