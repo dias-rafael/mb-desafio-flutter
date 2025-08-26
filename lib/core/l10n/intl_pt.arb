@@ -1,0 +1,9 @@
+{
+    "@@locale": "pt",
+    "appTitle": "CoinMarketCap",
+    "listTitle": "Lista Criptomoedas",
+    "detailsTitle": "Detalhes Criptomoeda",
+    "errorTitle": "Ocorreu um erro",
+    "errorMessage": "Algo deu errado. Por favor, tente novamente mais tarde.",
+    "errorUnknown": "Ocorreu um erro desconhecido."
+}

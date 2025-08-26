@@ -1,7 +1,9 @@
 // coverage:ignore-file
+import 'package:coinmarketcap/core/l10n/l10n.dart';
 import 'package:collection/collection.dart';
 
 enum ErrorType {
+  apiError,
   unknown;
 
   const ErrorType();
@@ -11,14 +13,12 @@ enum ErrorType {
   }
 
   String get localizedDescription {
-    return 'An unknown error occurred';
-    // final NavigationService navigationService =
-    //     DependencyService.resolve<NavigationService>();
-    // final context = navigationService.rootNavigatorKey.currentContext;
-    // final localization = AppLocalizations.of(context!)!;
-    // switch (this) {
-    //   default:
-    //     return localization.unknownError;
-    // }
+    final loc = AppLocalizations.current;
+    switch (this) {
+      case ErrorType.apiError:
+        return loc.errorMessage;
+      case ErrorType.unknown:
+        return loc.errorUnknown;
+    }
   }
 }
