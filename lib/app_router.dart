@@ -1,6 +1,6 @@
 import 'package:coinmarketcap/app_routes.dart';
-import 'package:coinmarketcap/features/coins/presentation/pages/details_coin_page.dart';
-import 'package:coinmarketcap/features/coins/presentation/pages/list_coins_page.dart';
+import 'package:coinmarketcap/features/exchanges/presentation/pages/details_coin_page.dart';
+import 'package:coinmarketcap/features/exchanges/presentation/pages/list_coins_page.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {

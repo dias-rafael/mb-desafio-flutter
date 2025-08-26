@@ -1,5 +1,5 @@
 import 'package:coinmarketcap/core/l10n/l10n.dart';
-import 'package:coinmarketcap/features/coins/presentation/pages/list_coins_page.dart';
+import 'package:coinmarketcap/features/exchanges/presentation/pages/list_coins_page.dart';
 import 'package:coinmarketcap/services/dependency_service.dart';
 import 'package:coinmarketcap/services/navigation_service.dart';
 import 'package:collection/collection.dart';

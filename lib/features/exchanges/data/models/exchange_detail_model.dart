@@ -1,4 +1,4 @@
-import 'package:coinmarketcap/features/coins/data/models/exchange_urls_model.dart';
+import 'package:coinmarketcap/features/exchanges/data/models/exchange_urls_model.dart';
 
 import '../../domain/entities/exchange_detail_entity.dart';
 

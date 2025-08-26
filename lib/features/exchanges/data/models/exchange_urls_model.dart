@@ -1,4 +1,4 @@
-import 'package:coinmarketcap/features/coins/domain/entities/exchange_urls_entity.dart';
+import 'package:coinmarketcap/features/exchanges/domain/entities/exchange_urls_entity.dart';
 
 class ExchangeUrlsModel extends ExchangeUrlsEntity {
   const ExchangeUrlsModel({
