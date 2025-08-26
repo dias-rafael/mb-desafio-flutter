@@ -2,6 +2,6 @@
 class URIPaths {
   URIPaths._();
 
-  static const String getListCoins = '';
-  static const String getDetailCoin = '';
+  static const String getListExchangeMap = '/v1/exchange/map';
+  static const String getDetailExchangeInfo = '/v1/exchange/info';
 }
