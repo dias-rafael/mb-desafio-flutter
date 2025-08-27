@@ -178,6 +178,46 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Maker Fee`
+  String get makerFee {
+    return Intl.message('Maker Fee', name: 'makerFee', desc: '', args: []);
+  }
+
+  /// `Taker Fee`
+  String get takerFee {
+    return Intl.message('Taker Fee', name: 'takerFee', desc: '', args: []);
+  }
+
+  /// `ID`
+  String get id {
+    return Intl.message('ID', name: 'id', desc: '', args: []);
+  }
+
+  /// `Error fetching exchange assets`
+  String get errorFetchingExchangeAssets {
+    return Intl.message(
+      'Error fetching exchange assets',
+      name: 'errorFetchingExchangeAssets',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Currencies`
+  String get currencies {
+    return Intl.message('Currencies', name: 'currencies', desc: '', args: []);
+  }
+
+  /// `Price USD: {value}`
+  String priceUSD(Object value) {
+    return Intl.message(
+      'Price USD: $value',
+      name: 'priceUSD',
+      desc: '',
+      args: [value],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

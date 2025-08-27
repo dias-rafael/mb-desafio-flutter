@@ -37,7 +37,7 @@ class ExchangeListTile extends StatelessWidget {
             loc.spotVolumeUSD(
               NumberFormat.currency(
                 locale: Localizations.localeOf(context).toString(),
-                symbol: '',
+                symbol: '\$',
                 decimalDigits: 2,
               ).format(exchange.spotVolumeUsd),
             ),

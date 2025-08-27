@@ -13,5 +13,11 @@
     "errorFetchingMoreExchanges": "Error fetching more exchanges",
     "errorFetchingExchanges": "Error fetching exchanges",
     "noExchangeDetailAvailable": "No exchange detail available",
-    "errorFetchingDetailExchanges": "Error fetching exchange details"
+    "errorFetchingDetailExchanges": "Error fetching exchange details",
+    "makerFee": "Maker Fee",
+    "takerFee": "Taker Fee",
+    "id": "ID",
+    "errorFetchingExchangeAssets": "Error fetching exchange assets",
+    "currencies": "Currencies",
+    "priceUSD": "Price USD: {value}"
 }

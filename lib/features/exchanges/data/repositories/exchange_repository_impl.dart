@@ -26,4 +26,14 @@ class ExchangeRepositoryImpl implements ExchangeRepository {
     final responseModel = await apiClient.fetchExchangeDetail(slugs: slugs);
     return responseModel;
   }
+
+  @override
+  Future<ApiResponseModel> fetchExchangeAssets({
+    required int exchangeId,
+  }) async {
+    final responseModel = await apiClient.fetchExchangeAssets(
+      exchangeId: exchangeId,
+    );
+    return responseModel;
+  }
 }

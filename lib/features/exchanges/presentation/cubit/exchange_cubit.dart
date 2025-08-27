@@ -112,6 +112,7 @@ class ExchangeCubit extends Cubit<ExchangeState> {
         } else {
           moreExchanges.data.addAll(newExchanges.data);
         }
+
         emit(
           ExchangesLoaded(
             exchanges: moreExchanges,

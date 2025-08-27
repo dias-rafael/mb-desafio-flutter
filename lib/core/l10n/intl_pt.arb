@@ -12,5 +12,11 @@
     "errorFetchingMoreExchanges": "Erro ao buscar mais exchanges",
     "errorFetchingExchanges": "Erro ao buscar exchanges",
     "noExchangeDetailAvailable": "Nenhum detalhe de exchange disponível",
-    "errorFetchingDetailExchanges": "Erro ao buscar detalhes das exchanges"
+    "errorFetchingDetailExchanges": "Erro ao buscar detalhes das exchanges",
+    "makerFee": "Taxa do Maker",
+    "takerFee": "Taxa do Taker",
+    "id": "ID",
+    "errorFetchingExchangeAssets": "Erro ao buscar ativos da exchange",
+    "currencies": "Moedas",
+    "priceUSD": "Preço USD: {value}"
 }

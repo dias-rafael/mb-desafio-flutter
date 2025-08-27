@@ -22,14 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(value) => "Launched: ${value}";
 
-  static String m1(value) => "Spot Volume USD: ${value}";
+  static String m1(value) => "Price USD: ${value}";
+
+  static String m2(value) => "Spot Volume USD: ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appTitle": MessageLookupByLibrary.simpleMessage("CoinMarketCap"),
+    "currencies": MessageLookupByLibrary.simpleMessage("Currencies"),
     "detailsTitle": MessageLookupByLibrary.simpleMessage("Exchange Details"),
     "errorFetchingDetailExchanges": MessageLookupByLibrary.simpleMessage(
       "Error fetching exchange details",
+    ),
+    "errorFetchingExchangeAssets": MessageLookupByLibrary.simpleMessage(
+      "Error fetching exchange assets",
     ),
     "errorFetchingExchanges": MessageLookupByLibrary.simpleMessage(
       "Error fetching exchanges",
@@ -44,14 +50,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "errorUnknown": MessageLookupByLibrary.simpleMessage(
       "An unknown error occurred.",
     ),
+    "id": MessageLookupByLibrary.simpleMessage("ID"),
     "launched": m0,
     "listTitle": MessageLookupByLibrary.simpleMessage("Exchanges List"),
+    "makerFee": MessageLookupByLibrary.simpleMessage("Maker Fee"),
     "noDataAvailable": MessageLookupByLibrary.simpleMessage(
       "No data available",
     ),
     "noExchangeDetailAvailable": MessageLookupByLibrary.simpleMessage(
       "No exchange detail available",
     ),
-    "spotVolumeUSD": m1,
+    "priceUSD": m1,
+    "spotVolumeUSD": m2,
+    "takerFee": MessageLookupByLibrary.simpleMessage("Taker Fee"),
   };
 }

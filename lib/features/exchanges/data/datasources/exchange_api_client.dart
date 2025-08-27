@@ -9,6 +9,7 @@ import 'package:coinmarketcap/services/dependency_service.dart';
 abstract class ExchangeApiClient {
   Future<ApiResponseModel> fetchExchanges({int? pageNumber, int? pageLimit});
   Future<ApiResponseModel> fetchExchangeDetail({required List<String> slugs});
+  Future<ApiResponseModel> fetchExchangeAssets({required int exchangeId});
 }
 
 class ExchangeApiClientImpl extends ExchangeApiClient {
@@ -42,6 +43,21 @@ class ExchangeApiClientImpl extends ExchangeApiClient {
       endpoint: '$baseURL$endpoint',
       apiMethod: ApiMethod.GET,
       queryParameters: {'slug': slugs.join(',')},
+    );
+
+    return await apiRequestHandler.request(request);
+  }
+
+  @override
+  Future<ApiResponseModel> fetchExchangeAssets({
+    required int exchangeId,
+  }) async {
+    final endpoint = URIPaths.getExchangeAssets;
+
+    final request = ApiRequestModel(
+      endpoint: '$baseURL$endpoint',
+      apiMethod: ApiMethod.GET,
+      queryParameters: {'id': exchangeId},
     );
 
     return await apiRequestHandler.request(request);
