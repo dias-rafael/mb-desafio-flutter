@@ -1,0 +1,48 @@
+name: coinmarketcap
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  collection: 1.19.1
+  cupertino_icons: ^1.0.8
+  equatable: 2.0.5
+  flutter_bloc: 9.1.0
+  flutter_dotenv: 6.0.0
+  get_it: 8.2.0
+  http: 1.5.0
+  intl: 0.20.2
+  url_launcher: 6.3.2
+  url_launcher_ios: 6.3.4
+  url_launcher_android: 6.3.17
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  bloc_test: 10.0.0
+  build_runner: ^2.7.0
+  flutter_lints: ^5.0.0
+  intl_utils: ^2.8.11
+  mocktail: 1.0.4
+
+flutter:
+  uses-material-design: true
+  assets:
+    - environment.env
+
+flutter_intl:
+  enabled: true
+  class_name: AppLocalizations
+  main_locale: en
+  arb_dir: lib/core/l10n
+  output_dir: lib/core/l10n
